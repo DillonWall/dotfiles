@@ -19,29 +19,28 @@
 )
 
 (deflayer base
-    @hold_esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
+    caps  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
     grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
     tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
-    caps a    s    @hold_d    @hold_f    g    h    @hold_j    k    l    ;    '    ret
+    @hold_esc a    s    @hold_d    @hold_f    g    h    @hold_j    k    l    ;    '    ret
     lsft z  x    c    v    b    n    m    ,    .   /   rsft
     lctl      lalt           spc            rctl
 )
 
 (deflayer num_layer
-    @hold_esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
+    _  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
     lrld   _   _   _   _   _   _   _   _   _   _   _   _   _
     _   S-8   S-=   S-[   S-]   S-3   _   7    8    9    9   _   _   _
-    _   S--   =   @hold_d   _   S-2   _   4    5    6    6   _   _
-    _   S-4   -   [   ]   _   _   1    2    3    3   _
+    @hold_esc   S--   =   @hold_d   _   S-2   _   4    5    6    6   _   _
+    _   S-4   -   [   ]   _   1   1    2    3    3   _
     _        _             0             .
 )
 
 (deflayer sym_layer
-    @hold_esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
+    _  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
     lrld   _   _   _   _   _   _   _   _   _   _   _   _   _
     _   S-8   S-=   S-[   S-]   S-3   _   _   S-6   S-5   S-7   _   _   _
-    _   S--   =   S-9   S-0   S-2   _   _   S-1   S-,   S-.   _   _
+    @hold_esc   S--   =   S-9   S-0   S-2   _   _   S-1   S-,   S-.   _   _
     _   S-4   -   [   ]   S-\   _   _   _   _   \   _
     _        _            _             _
 )
-

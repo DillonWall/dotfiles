@@ -103,10 +103,13 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export PATH=$PATH:/usr/local/go/bin
-export PATH="/snap/bin:$PATH"
-
-alias vim="nvim"
+# Load custom scripts ########################################################
+# kanata
+if ! pgrep -f "kanata.exe" > /dev/null; then
+    cd /mnt/c/dev/kanata
+    ./kanata.exe -c my-config.kbd > /dev/null 2>&1 &
+    cd ~
+fi
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -119,4 +122,14 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
-alias dotfiles=/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME
+##############################################################################
+
+# Exports
+export PATH=$PATH:/usr/local/go/bin
+export PATH="/snap/bin:$PATH"
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+# Aliases
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias vim="nvim"
+
