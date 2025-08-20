@@ -128,8 +128,10 @@ esac
 export PATH=$PATH:/usr/local/go/bin
 export PATH="/snap/bin:$PATH"
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+export EDITOR="nvim"
+export VISUAL="nvim"
 
 # Aliases
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias vim="nvim"
-
+alias db='dbeaver-ce 2&>1 &'
